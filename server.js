@@ -13,7 +13,7 @@ const fetch = require("node-fetch");
 const app = express();
 app.use(express.json());
 
-const GITHUB_TOKEN = "ここにトークン"; // ←あなたのトークン
+const GITHUB_TOKEN = "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"; // ←あなたのトークン
 
 app.post("/deploy", async (req, res) => {
   const { name } = req.body;
@@ -29,7 +29,7 @@ app.post("/deploy", async (req, res) => {
           Accept: "application/vnd.github+json"
         },
         body: JSON.stringify({
-          owner: "YOUR_USERNAME",
+          owner: "reoreoxzkami",
           name: name,
           private: false
         })
